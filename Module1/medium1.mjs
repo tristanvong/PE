@@ -1,6 +1,6 @@
 // Module 1 - Variabelen - medium - oefening 1
 // Initials - Initialen
-// Opteller
+//Opteller
 console.log('_/_/_/_/_/     _/         _/');
 console.log('   _/           _/      _/');
 console.log('  _/            _/     _/');
