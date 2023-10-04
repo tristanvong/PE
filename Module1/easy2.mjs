@@ -1,4 +1,4 @@
-// Module 1 - Variabelen oefening 2
+// Module 1 - Variabelen - easy - oefening 2
 // Initials - Initialen
 console.log('_/_/_/_/_/     _/         _/');
 console.log('   _/           _/      _/');

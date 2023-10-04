@@ -1,4 +1,4 @@
-// Module 1 - Variabelen - easy - oefening 3
+// Module 1 - Variabelen - medium - oefening 1
 // Initials - Initialen
 console.log('_/_/_/_/_/     _/         _/');
 console.log('   _/           _/      _/');
@@ -17,13 +17,22 @@ const userInput = readline.createInterface({input, output});
 let getal1;
 let getal2;
 let som;
+let verschil;
+let product;
+let deling;
 
-// userInputs
-getal1 = parseFloat(await userInput.question('Voer een getal in: '));
-getal2 = parseFloat(await userInput.question('Voer een ander getal in: '));
+// Assigning values
+getal1 = 1;
+getal2 = 2;
 som = getal1 + getal2;
+verschil = getal1 - getal2;
+product = getal1 * getal2;
+deling = getal1 / getal2;
 
 // Output
-console.log('De som van jouw twee getallen: ' + som + '.');
+console.log('De som van de twee getallen is: ' + som + '.');
+console.log('Het verschil van de twee getallen is: ' + verschil + '.');
+console.log('Het product van de twee getallen is: ' + product + '.');
+console.log('De deling van de twee getallen: ' + deling + '.');
 
 process.exit();
