@@ -1,5 +1,6 @@
 // Module 1 - Variabelen - easy - oefening 3
 // Initials - Initialen
+// Opteller
 console.log('_/_/_/_/_/     _/         _/');
 console.log('   _/           _/      _/');
 console.log('  _/            _/     _/');

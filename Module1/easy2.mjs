@@ -1,5 +1,6 @@
 // Module 1 - Variabelen - easy - oefening 2
 // Initials - Initialen
+// Basic dynamic variable code
 console.log('_/_/_/_/_/     _/         _/');
 console.log('   _/           _/      _/');
 console.log('  _/            _/     _/');
