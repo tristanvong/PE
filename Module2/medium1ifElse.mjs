@@ -44,7 +44,7 @@ console.log('');
 if (keuze == keuze1)
 {
     console.log('Je koos voor "' + artiest1 + '"');
-    console.log('Ze zijn de artiest achter de hit: Mijnen blauwe geschelpte');
+    console.log('Ze zijn de artiest achter de hit: Californication');
 }
     else if (keuze == keuze2)
     {
@@ -54,12 +54,12 @@ if (keuze == keuze1)
     else if (keuze == keuze3)
     {
         console.log('Je koos voor "' + artiest3 + '"');
-        console.log('Ze zijn de artiest achter de hit: Thunderstruck');
+        console.log('Ze zijn de artiest achter de hit: Rio');
     }
     else if (keuze == keuze4)
     {
         console.log('Je koos voor "' + artiest4 + '"');
-        console.log('Ze zijn de artiest achter de hit: Rio');
+        console.log('Ze zijn de artiest achter de hit: Mijnen blauwe geschelpte');
     }
     else
     {
