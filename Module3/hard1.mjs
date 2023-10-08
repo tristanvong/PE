@@ -28,19 +28,19 @@ if (hoogte % 2 == 0 || hoogte <= 0){ // if height is even OR height equals 0 OR 
 
     // This is for the UPPER half of the pyramid
     while(bovensteKant < hoogte){ // While the stars of the upper half are smaller than the given height loop through:
-        console.log(witSpatie.repeat(bovensteKantWitspatie) + teken.repeat(bovensteKant)) // print out whitespace * whitespace iteration and character * amount of stars @ upper half pyramid
-        bovensteKantWitspatie -= 1 // Whitespace reduces every layer it goes down
-        bovensteKant += 2 // Character (stars) increase every layer it goes down
+        console.log(witSpatie.repeat(bovensteKantWitspatie) + teken.repeat(bovensteKant)); // print out whitespace * whitespace iteration and character * amount of stars @ upper half pyramid
+        bovensteKantWitspatie -= 1; // Whitespace reduces every layer it goes down
+        bovensteKant += 2; // Character (stars) increase every layer it goes down
     }
     
-    console.log(teken.repeat(hoogte)) // This is the base of the pyramid
-    witSpatieIteratie = 0 // Whitespace iteration gets reset to 0
+    console.log(teken.repeat(hoogte)); // This is the base of the pyramid
+    witSpatieIteratie = 0; // Whitespace iteration gets reset to 0
     
     //This is for the LOWER half of the pyramid
     while(hoogte > 1){ // While height is bigger than 1 do:
-        witSpatieIteratie += 1 // Whitespace iteration +1 every iteration
+        witSpatieIteratie += 1; // Whitespace iteration +1 every iteration
         hoogte -= 2; // Height -2 every iteration
-        console.log(witSpatie.repeat(witSpatieIteratie) + teken.repeat(hoogte)) // Print out: whitespace * iteration and character * height
+        console.log(witSpatie.repeat(witSpatieIteratie) + teken.repeat(hoogte)); // Print out: whitespace * iteration and character * height
         
     }
 }
