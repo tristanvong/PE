@@ -16,9 +16,9 @@ const userInput = readline.createInterface({input, output});
 
 // Print every number from 1 through 20
 let som = 0;
-while(som <= 19){
-    som += 1
+while(som <= 20){
     console.log(som)
+    som += 2
 }
 
 process.exit();
