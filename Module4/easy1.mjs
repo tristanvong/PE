@@ -16,7 +16,9 @@ let zijde2 = 2;
 let result;
 
 // Formula
-result = zijde1*zijde2
+result = zijde1*zijde2;
 
 // Output
-console.log(`De oppervlakte van de rechthoek is: ${result}`)
+console.log(`De oppervlakte van de rechthoek is: ${result}`);
+
+process.exit();
