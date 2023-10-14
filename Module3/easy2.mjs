@@ -16,7 +16,7 @@ const userInput = readline.createInterface({input, output});
 
 //Variables
 
-let getal = 8;
+let getal = 3;
 let i = 1;
 
 // Title
