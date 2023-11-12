@@ -1,30 +1,15 @@
-// Module 1 - Variabelen - easy - oefening 2
-// Initials - Initialen
-// Basic dynamic variable code
-console.log('_/_/_/_/_/     _/         _/');
-console.log('   _/           _/      _/');
-console.log('  _/            _/     _/');
-console.log(' _/              _/  _/');
-console.log('_/         _/     _/');
-console.log('Code geschreven door Tristan Vong');
-console.log('----------------------------------');
-
-// Import userInput function
 import * as readline from 'node:readline/promises';
-import {stdin as input, stdout as output} from 'node:process';
-const userInput = readline.createInterface({input,output});
+import{stdin as input, stdout as output} from 'node:process';
+const userInput = readline.createInterface({input, output});
 
-// Variables
-let naam;
-let leeftijd;
-let favorietSpel;
+//E2: Dynamische Introductie
+//Vraag telkens de naam 'name', leeftijd 'age' en favoriet videospel 'favoriteGame'
+//aan de gebruiker. Print een tekst met deze variabelen vervolgens uit
 
-// userInputs (What is your name?) (How old are you?) (What is your favourite videogame?)
-naam = await userInput.question('Wat is uw naam? ');
-leeftijd = parseFloat(await userInput.question('Hoe oud bent u? '));
-favorietSpel = await userInput.question('Wat is uw favoriet videospel? ');
+let name = await userInput.question('Wat is je naam? ');
+let age = parseFloat(await userInput.question('Wat is je leeftijd? '));
+let favoriteGame = await userInput.question('Wat is je favoriet videospel? ');
 
-// Output
-console.log('Hallo '+ naam +', ik hoor dat je '+ leeftijd +' jaar oud bent en dat je lievelingsgame '+ favorietSpel +' is.');
+console.log('Hallo '+ name +', ik hoor dat je '+ age +' jaar oud bent en dat je lievelingsgame '+ favoriteGame +' is.');
 
 process.exit();

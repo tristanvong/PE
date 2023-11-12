@@ -1,39 +1,23 @@
-// Module 1 - Variabelen - medium - oefening 1
-// Initials - Initialen
-// Opteller
-console.log('_/_/_/_/_/     _/         _/');
-console.log('   _/           _/      _/');
-console.log('  _/            _/     _/');
-console.log(' _/              _/  _/');
-console.log('_/         _/     _/');
-console.log('Code geschreven door Tristan Vong');
-console.log('----------------------------------');
-
-// Import userInput function
 import * as readline from 'node:readline/promises';
 import{stdin as input, stdout as output} from 'node:process';
 const userInput = readline.createInterface({input, output});
 
-// Variables
-let getal1;
-let getal2;
-let som;
-let verschil;
-let product;
-let deling;
+// M1: Uitbreiden van "Opteller"
+// We gaan onze "Opteller" van de vorige oefening licht aanpassen. 
+// In plaats van de gebruiker om de getallen te vragen gaan we zelf twee getallen definiëren. 
+// Vervolgens gaan we van deze twee getallen de som, verschil, product en deling laten zien.
 
-// Assigning values
-getal1 = 1;
-getal2 = 2;
-som = getal1 + getal2;
-verschil = getal1 - getal2;
-product = getal1 * getal2;
-deling = getal1 / getal2;
+let getal1 = 6;
+let getal2 = 3;
 
-// Output
-console.log('De som van de twee getallen is: ' + som + '.');
-console.log('Het verschil van de twee getallen is: ' + verschil + '.');
-console.log('Het product van de twee getallen is: ' + product + '.');
-console.log('De deling van de twee getallen: ' + deling + '.');
+let som = getal1 + getal2;
+let verschil = getal1 - getal2;
+let product = getal1 * getal2;
+let deling = getal1 / getal2;
+
+console.log('De som is ' + som);
+console.log('Het verschil is ' + verschil);
+console.log('Het product is ' + product);
+console.log('De deling is ' + deling);
 
 process.exit();

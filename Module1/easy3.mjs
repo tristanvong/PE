@@ -1,30 +1,14 @@
-// Module 1 - Variabelen - easy - oefening 3
-// Initials - Initialen
-// Opteller
-console.log('_/_/_/_/_/     _/         _/');
-console.log('   _/           _/      _/');
-console.log('  _/            _/     _/');
-console.log(' _/              _/  _/');
-console.log('_/         _/     _/');
-console.log('Code geschreven door Tristan Vong');
-console.log('----------------------------------');
+import * as readline from "node:readline/promises";
+import { stdin as input, stdout as output } from "node:process";
+const userInput = readline.createInterface({ input, output });
 
-// Import userInput function
-import * as readline from 'node:readline/promises';
-import{stdin as input, stdout as output} from 'node:process';
-const userInput = readline.createInterface({input, output});
+//E3: Dynamische Simpele Opteller
+//Vraag 2 getallen aan gebruiker, tel deze vervolgens met elkaar op
 
-// Variables
-let getal1;
-let getal2;
-let som;
+let getal1 = parseFloat(await userInput.question("Voer een getal in: "));
+let getal2 = parseFloat(await userInput.question("Voer een getal in: "));
 
-// userInputs
-getal1 = parseFloat(await userInput.question('Voer een getal in: '));
-getal2 = parseFloat(await userInput.question('Voer een ander getal in: '));
-som = getal1 + getal2;
-
-// Output
-console.log('De som van jouw twee getallen: ' + som + '.');
+let som = getal1 + getal2;
+console.log(som);
 
 process.exit();
