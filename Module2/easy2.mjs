@@ -1,33 +1,22 @@
-// Module 2 - Beslissingen - easy - oefening 2
-// Initials - Initialen
-// Nummer tussen
-console.log('_/_/_/_/_/     _/         _/');
-console.log('   _/           _/      _/');
-console.log('  _/            _/     _/');
-console.log(' _/              _/  _/');
-console.log('_/         _/     _/');
-console.log('Code geschreven door Tristan Vong');
-console.log('----------------------------------');
-
-
-// Import userInput function
 import * as readline from 'node:readline/promises';
 import{stdin as input, stdout as output} from 'node:process';
 const userInput = readline.createInterface({input, output});
 
-// Variables
-let minimum = 4;
-let maximum = 72;
-let getal = parseFloat(await userInput.question('Kies een getal: '));
+// E2: Nummer tussen
+// Maak 2 variabelen aan: minimum en maximum. Ken een getal toe aan deze variabelen.
 
-// If statement the valua has to be between min and max to print out the correct text
-if (getal >= minimum && getal <= maximum)
-{
-    console.log('Je getal ' + getal + ' ligt tussen ' + minimum + ' en ' + maximum);
+// Vraag een getal aan de gebruiker. Controleer of dit getal tussen minimum en maximum ligt.
+// Geef de gebruiker iets terug in deze aard: Je getal 16 ligt tussen 4 en 22 of Je getal 11 ligt niet
+// tussen 15 en 84.
+
+let minimum = 4;
+let maximum = 22;
+let getalVanGebruiker = parseFloat(await userInput.question('Voer een getal in: '));
+
+if (minimum <= getalVanGebruiker && maximum >= getalVanGebruiker) {
+    console.log(`Je getal ${getalVanGebruiker} ligt tussen ${minimum} en ${maximum}`);    
+}else{
+    console.log(`Je getal ${getalVanGebruiker} ligt niet tussen ${minimum} en ${maximum}`);    
 }
-    else
-    {
-        console.log('Voer een getal in tussen ' + minimum + ' en ' + maximum);
-    }
 
 process.exit();

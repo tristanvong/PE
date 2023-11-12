@@ -1,32 +1,22 @@
-// Module 2 - Beslissingen - hard - oefening 2
-// Initials - Initialen
-// Schrikkeljaar
-console.log('_/_/_/_/_/     _/         _/');
-console.log('   _/           _/      _/');
-console.log('  _/            _/     _/');
-console.log(' _/              _/  _/');
-console.log('_/         _/     _/');
-console.log('Code geschreven door Tristan Vong');
-console.log('----------------------------------');
-
-
-// Import userInput function
 import * as readline from 'node:readline/promises';
 import{stdin as input, stdout as output} from 'node:process';
 const userInput = readline.createInterface({input, output});
 
-console.log('Schrikkeljaar berekenaar');
-console.log(' ');
+// H2: Schrikkeljaar
+// Schrijf een script dat een jaartal inleest en als output het aantal dagen in februari weergeeft.
 
-let jaartal = parseFloat(await userInput.question('Geef een jaar: '));
+// De 'regel' voor een schrikkeljaar is als volgt:
+// Het jaartal is deelbaar door 4 => wel een schrikkeljaar
 
-if (jaartal % 4 == 0)
-{
-    console.log('Het jaartal ' + jaartal + ' is een schrikkeljaar. Februari heeft 29 dagen tijdens dit jaar.');
+let jaartal = parseFloat(await userInput.question('Voer een jaartal in: '));
+let aantalDagenFebruari;
+
+if(jaartal % 4 == 0){
+    aantalDagenFebruari = 29;
+}else{
+    aantalDagenFebruari = 28;
 }
-    else
-    {
-        console.log('Het jaartal ' + jaartal + ' is geen schrikkeljaar. Februari heeft 28 dagen tijdens dit jaar.')
-    }
+
+console.log(`Februari heeft ${aantalDagenFebruari} dagen in het jaar ${jaartal}`);
 
 process.exit();

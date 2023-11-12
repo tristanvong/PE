@@ -1,39 +1,17 @@
-// Module 2 - Beslissingen - easy - oefening 1
-// Initials - Initialen
-// Even of oneven
-console.log('_/_/_/_/_/     _/         _/');
-console.log('   _/           _/      _/');
-console.log('  _/            _/     _/');
-console.log(' _/              _/  _/');
-console.log('_/         _/     _/');
-console.log('Code geschreven door Tristan Vong');
-console.log('----------------------------------');
-
-
-// Import userInput function
 import * as readline from 'node:readline/promises';
 import{stdin as input, stdout as output} from 'node:process';
 const userInput = readline.createInterface({input, output});
 
-// Variable
-let getal;
+// E1: Even of oneven
+// Vraag een getal aan de gebruiker. Controleer of dit getal even of oneven is
+// (met behulp van de restoperator %). Print even of oneven af naar de gebruiker.
 
-// userInput
-getal = parseFloat(await userInput.question('Geef een getal: '));
+let getalVanGebruiker = parseFloat(await userInput.question('Voer een getal in: '));
 
-
-// ifStatement
-if (getal % 2 == 0)
-{
-    console.log('Uw getal is even.');
+if (getalVanGebruiker % 2 == 0) {
+    console.log('Even')
+}else{
+    console.log('Oneven')
 }
-    else if (getal % 2 == 1)
-    {
-        console.log('Uw getal is oneven.');
-    }
-    else
-    {
-        console.log('U hebt geen geldige waarde ingevoerd, probeer opnieuw.');
-    }
 
 process.exit();
