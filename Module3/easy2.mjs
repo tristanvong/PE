@@ -1,32 +1,21 @@
-// Module 3 - Lussen - easy - oefening 2
-// Initials - Initialen
-// Tafel van vermenigvuldiging
-console.log('_/_/_/_/_/     _/         _/');
-console.log('   _/           _/      _/');
-console.log('  _/            _/     _/');
-console.log(' _/              _/  _/');
-console.log('_/         _/     _/');
-console.log('Code geschreven door Tristan Vong');
-console.log('----------------------------------');
-
-// Import userInput function
 import * as readline from 'node:readline/promises';
 import{stdin as input, stdout as output} from 'node:process';
 const userInput = readline.createInterface({input, output});
 
-//Variables
+//E2: Tafel van vermenigvuldiging
+//Maak een variabele getal aan, gebruik een lus om de tafels van vermenigvuldiging van dat getal
+//te laten zien. De output zal er ongeveer als volgt uit zien
 
-let getal = 3;
-let i = 1;
+//De tafel van 5:
+//5 x 1 = 5
+//5 x 2 = 10
+// ...
 
-// Title
-console.log(`De tafel van ${getal}: `);
+let getal = 5;
 
-// While loop
-while(i <= 10){
-    let uitkomst = getal * i;
-    console.log(`${getal} x ${i} = ${uitkomst}`);
-    i++;
+for (let i = 1; i <= 10; i++){
+    let resultaat = getal * i;
+    console.log(`${getal} x ${i} = ${resultaat}`);
 }
 
 process.exit();

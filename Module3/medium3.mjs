@@ -1,39 +1,24 @@
-// Module 3 - Lussen - medium - oefening 1
-// Initials - Initialen
-// Getallen optellen
-console.log('_/_/_/_/_/     _/         _/');
-console.log('   _/           _/      _/');
-console.log('  _/            _/     _/');
-console.log(' _/              _/  _/');
-console.log('_/         _/     _/');
-console.log('Code geschreven door Tristan Vong');
-console.log('----------------------------------');
-
-// Import userInput function
 import * as readline from 'node:readline/promises';
 import{stdin as input, stdout as output} from 'node:process';
 const userInput = readline.createInterface({input, output});
 
-let getal = parseFloat(await userInput.question('Geef een getal in: '));
-let i = 2;
-let isPriem = true;
+//M3: Priemgetal
+//Vraag een getal aan de gebruiker. Controleer of dit getal een priemgetal is of niet. (Een getal
+//is een priemgetal wanneer het enkel deelbaar is door 1 of door zichzelf)
 
-if (getal == 1 || getal <= 0){
-    console.log(`${getal} is geen priemgetal.`);
-} else if (getal > 0){
+let gebruikerInput = parseFloat(await userInput.question('Voer een getal in: '));
+let isPriemGetal = true;
 
-    for(i = 2; i < getal; i++){
-        if(getal % i == 0){ // Als getal deelbaar is door i en geen rest heeft dan is het geen priemgetal
-            isPriem = false;
-            break;
-        }
+for (let i = 2; i < gebruikerInput; i++){
+    if (gebruikerInput % i == 0){
+        isPriemGetal = false;
     }
+}
 
-    if(isPriem == true){
-        console.log(`${getal} is een priemgetal.`);
-    } else{
-        console.log(`${getal} is geen priemgetal.`);
-    }
+if (isPriemGetal == true){
+    console.log(`Jouw getal is een priemgetal.`);
+}else{
+    console.log(`Jouw getal is niet een priemgetal.`);
 }
 
 process.exit();

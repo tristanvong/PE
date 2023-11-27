@@ -1,35 +1,21 @@
-// Module 3 - Lussen - medium - oefening 4
-// Initials - Initialen
-// FizzBuzz
-console.log('_/_/_/_/_/     _/         _/');
-console.log('   _/           _/      _/');
-console.log('  _/            _/     _/');
-console.log(' _/              _/  _/');
-console.log('_/         _/     _/');
-console.log('Code geschreven door Tristan Vong');
-console.log('----------------------------------');
-
-// Import userInput function
 import * as readline from 'node:readline/promises';
 import{stdin as input, stdout as output} from 'node:process';
 const userInput = readline.createInterface({input, output});
 
-// Variables
-let i = 0;
-let som = 1;
+//M4: FizzBuzz
+//Maak een applicatie dat alle getallen tussen 1 en 100 afprint. Maar voor getallen deelbaar door
+//3 print je "Fizz" af, voor getallen deelbaar door 5 print je "Buzz" af en voor getallen deelbaar
+//door 3 en 5 print je "FizzBuzz" af.
 
-
-while(i < 100){ // 1 - 100
-    console.log(som)
-    if(som % 3 == 0 && som % 5 == 0){
-        console.log('FizzBuzz') // Print FizzBuzz if number can be divided by 3 and 5
-    } else if (som % 3 == 0){
-        console.log('Fizz') // Print Fizz if number can be divided by 3
-    } else if (som % 5 == 0){
-        console.log('Buzz') // Print Fizz if number can be divided by 3
+for (let i = 1; i <= 100; i++){
+    console.log(i);
+    if (i % 3 == 0 && i % 5 == 0){
+        console.log('FizzBuzz');
+    }else if (i % 3 == 0){
+        console.log('Fizz');
+    }else if (i % 5 == 0){
+        console.log('Buzz');
     }
-    som += 1 
-    i++;
 }
 
 process.exit();

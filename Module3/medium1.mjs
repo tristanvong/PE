@@ -1,32 +1,22 @@
-// Module 3 - Lussen - medium - oefening 1
-// Initials - Initialen
-// Getallen optellen
-console.log('_/_/_/_/_/     _/         _/');
-console.log('   _/           _/      _/');
-console.log('  _/            _/     _/');
-console.log(' _/              _/  _/');
-console.log('_/         _/     _/');
-console.log('Code geschreven door Tristan Vong');
-console.log('----------------------------------');
-
-// Import userInput function
 import * as readline from 'node:readline/promises';
 import{stdin as input, stdout as output} from 'node:process';
 const userInput = readline.createInterface({input, output});
 
-let getal = 0;
+//M1: Getallen optellen
+//Maak een applicatie dat getallen aan de gebruiker vraagt en deze optelt bij elkaar zolang het
+//ingegeven getal groter is dan 0. Van zodra de gebruiker een getal kleiner of gelijk aan 0
+//ingeeft print de applicatie de som af.
+
 let som = 0;
+let gebruikerInput;
 
-while(getal >= 0){
-    getal = parseFloat(await userInput.question('Geef een getal in: '));
-
-    // The if statement makes sure that the sum doesn't get affected by negative numbers
-    if (getal > 0){
-        som += getal;
-    } else 
-    {
+do{
+    gebruikerInput = parseFloat(await userInput.question('Voer een getal in: '));
+    if (gebruikerInput > 0){
+        som += gebruikerInput;        
     }
-    console.log(som);
-}
+}while(gebruikerInput > 0);
+
+console.log(som);
 
 process.exit();
